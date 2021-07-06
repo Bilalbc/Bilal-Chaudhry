@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <nav class='nav_list'>
+            <a href="#">
+                <img class="primary_icon" src="images/logo.png" alt="logo">
+            </a>
+            <ul class="nav_items">
+                <li class="list_e"><a class='nav_link' href="#Home" class="active">Home</a></li>
+                <li class="list_e"><a class='nav_link' href="#About">About</a></li>
+                <li class="list_e"><a class='nav_link' href="#Experience">Experience</a></li>
+                <li class="list_e"><a class='nav_link' href="#Work">Work</a></li>
+                <li class="list_e"><a class='nav_link' href="#Contact">Contact</a></li>
+            </ul>
+            <a class="resume" href="#"><button>Resume</button></a>
+        </nav>
+    </header>
+    <div class="image-container">
+        <div class="intro-text">
+            <h1>HI, IM BILAL</h1>
+        </div>
+        <!-- <img id="image" src="images/cafe.jpg" alt="cafe"> -->
+    </div>
+        <!-- <div class="video-container">
+            <video autoplay muted loop id="video">
+                <source src="images/rainy_vibes_HD.mp4" type="video/mp4">
+            </video>
+        </div> -->
+    </div>
+    <div class="about_page">
+        <img src="images/brown-blurred-background_1034-248.jpg" alt="asd">
+        <p>
+        </p>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById('header')
+        var items = document.getElementsByClassName('list_e');
+        var page = document.getElementById('about_page');
+
+        var logo = document.getElementsByClassName('primary_icon');
+        var r_button = document.getElementsByClassName('resume');
+
+        function myFunction() {
+        if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            navbar.style.padding = '0.5%';
+            navbar.style.backgroundColor ='#9a4d00';
+            r_button[0].style.display = 'inline-block';
+            logo[0].style.display = 'inline-block';
+            for(var i = 0; i < items.length; i++) {
+                items[i].style.padding = '0.5%';
+            }
+        }else {
+            navbar.style.backgroundColor = 'transparent';
+            navbar.style.padding = '30px 10px';
+            r_button[0].style.display = 'none';
+            logo[0].style.display = 'none';
+            for(var i = 0; i < items.length; i++) {
+                items[i].style.padding = '0.5% 6%';
+            }
+
+        }
+    }
+    </script>
+</body>
+</html>
