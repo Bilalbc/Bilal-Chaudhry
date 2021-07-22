@@ -18,7 +18,7 @@
     --text-large: 48px;
 }
 
-*{
+*, :before, :after{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -432,18 +432,17 @@ section {
 }
 
 .timeline_block {
-    padding: 10px 40px;
+    padding: 0px 40px;
     position: relative;
-    float: right;
 }
 
-.timeline_block {
-    width: 100%;
-    padding-left: 75px;
-    padding-right: 75px;
-  }
+.timeline_block::after {
+    content: '';
+    display: table;
+    clear: both;
+}
 
-.timeline_block .timeline_content::before {
+/* .timeline_block .timeline_content::before {
     content: '';
     position: absolute;
     top: 24px;
@@ -453,26 +452,33 @@ section {
     border: 15px solid transparent;
     border-color: transparent;
     border-right-color: white;
-}
+} */
 
-.timeline_block:nth-child(odd) .timeline_content {
+.timeline_block:nth-child(odd) .block_content {
     float: left;
 }
 
-.timeline_block:nth-child(odd) .timeline_content::before {
+/* .timeline_block:nth-child(odd) .timeline_content::before {
     top: 24px;
     left: 100%;
     border-color: transparent;
     border-left-color: white;
+} */
+
+.block_content {
+    float: right;
+    position: relative;
+    background-color: inherit;
+    color: white;
+    margin-left: 0;
+    width: 53%;
+    border-radius: 3px;
+    padding: 10px 30px;
 }
 
-.timeline_content {
-    float: right;
-    padding: 20px 30px;
-    background-color: white;
-    color: black;
-    position: relative;
-    border-radius: 6px;
+.content_body {
+    background-color: inherit;
+    padding: 10px 20px;
 }
 
 .timeline_img {
@@ -504,7 +510,33 @@ section {
     background-image: url(images/github-mini-icon.png);
 }
 
-.timeline_block .date {
+.content_header {
+    display: block;
+}
+
+.highlight {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, var(--highlight-important-dark) 60%);
+}
+
+.color_strip {
+    width: 100%;
+    height: 20px;
+    background-color: var(--highlight-important-dark);
+    opacity: 0.7;
+}
+.date {
+    font-size: var(--text-medium);
+}
+
+.right  {
+    text-align: right;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* .timeline_block .date {
     font-size: 1em;
     font-weight: 500;
     display: inline-block;
@@ -514,13 +546,13 @@ section {
     width: 100%;
     left: 20%;
     top: 30px;
-}
+} */
 
-.timeline_block:nth-child(odd) .date {
+/* .block_content:nth-child(odd) .date {
     text-align: right;
     left: auto;
     right: 20%;
-}
+} */
 
 @media (min-width: 1200px) {
     .container {
