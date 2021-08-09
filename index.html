@@ -4,25 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
     <title>BilalChaudhry.com</title>
 </head>
 <body>
     <header id="header">
         <nav class='nav_list'>
-            <!-- <a href="#">
-                <img class="primary_icon" src="images/logo.png" alt="logo">
-            </a> -->
-            <ul class="nav_items">
-                <li class="list_e"><a class='nav_link active' href="#home">Home</a></li>
-                <li class="list_e"><a class='nav_link' href="#about">About</a></li>
-                <li class="list_e"><a class='nav_link' href="#skills">Skills</a></li>
-                <li class="list_e"><a class='nav_link' href="#experience">Experience</a></li>
-                <li class="list_e"><a class='nav_link' href="#contact">Contact</a></li>
+            <ul id="mainNav"class="nav_items">
+                <li class="list_e active"><a href="#home">Home</a></li>
+                <li class="list_e"><a href="#about">About</a></li>
+                <li class="list_e"><a href="#experience">Experience</a></li>
+                <li class="list_e"><a href="#projects">Projects</a></li>
+                <li class="list_e"><a href="#contact">Contact</a></li>
             </ul>
-            <!-- <a class="resume" href="#"><button>Resume</button></a> -->
         </nav>
     </header>
     <div orientation="left" class="side_elements">
@@ -47,11 +45,10 @@
             <div class="background_dark">
                 <section id="about" class="container">
                     <h2 class="heading dark_text">About
-                    <hr>
                     </h2>
                     <div class="body_text">
                         <div class="col_aa">
-                            <h3 class="dark_text">Who am I?<hr></h3>
+                            <h3 class="dark_text">Who am I?</h3>
                             <p>
                                 Hello! Thanks for taking the time to look through my site! I'm Bilal Chaudhry,
                                 A software engineering student with strong fundamentals in multiple languages, and
@@ -64,7 +61,7 @@
                             <img src="images/personal.png" alt="Bilal Chaudhry" width="246" height="246">
                         </div>
                         <div class="col_aa">
-                            <h3 class="dark_text">Details<hr></h3>
+                            <h3 class="dark_text">Details</h3>
                             <p>
                                 <strong>Name</strong>
                                 <br>
@@ -85,140 +82,250 @@
                         Seem interesting?
                         <a href="">Contact Me</a>
                     </div>
-                </section>
-            </div>
-            <div class="skills_background">
-                <section id="skills" class="container">
-                    <h2 class="heading light_text">
-                        Skills
-                        <hr>
-                    </h2>
-                    <div class="body_text">
-                        <div class="col_aa dev_wrapper section_font">
-                            <h3 class="subheading_font">Development</h3>
-                            <ul>
-                                <li class="dev_icons">HTML5</li>
-                                <li class="dev_icons">CSS3</li>
-                                <li class="dev_icons">JS</li>
-                                <li class="dev_icons">Node</li>
-                                <li class="dev_icons">Python</li>
-                                <li class="dev_icons">Java</li>
-                                <li class="dev_icons">SQL</li>
-                                <li class="dev_icons">C/C++</li>
-                                <li class="dev_icons">Assembly</li>
-                            </ul>
+                    <div class="skills">
+                        <h3 class="dark_text">My Specialties</h3>
+
+                        <ul class="tabs">
+                            <li data-tab-target="#professional" class="active tab">Professional </li>
+                            <li data-tab-target="#personal" class="tab">Personal </li>
+                        </ul>
+
+                        <div id="professional" data-tab-content class="skills_content active">
+                            <div class="col_aa">
+                                <h4 class="subheading_font">Development</h4>
+                                <ul>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>javascript (ES6)</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="col_aa">
+                                <h4 class="subheading_font">Tools</h4>
+                                <ul>
+                                    <li>Git/Github</li>
+                                    <li>Command Line</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </div>
+                            <div class="col_aa">
+                                <h4 class="subheading_font">Workspaces</h4>
+                                <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>Windows</li>
+                                    <li>Linux</li>
+                                    <li>Chrome</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col_aa">
-                            <h3 class="subheading_font">Tools</h3>
-                            <ul>
-                                <li class="tool_icons">
-                                    <img src="images/vsc-mini-icon.png" alt="VSC" title="Visual Studio Code">
-                                </li>
-                                <li class="tool_icons">
-                                    <img src="images/github-mini-icon.png" alt="GitHub" title="Git/Github">
-                                </li>
-                                <li class="tool_icons">
-                                    <img src="images/linux-mini-icon.png" alt="Linux" title="Linux">
-                                </li>
-                                <li class="tool_icons">
-                                    <img src="images/arduino-mini-icon.png" alt="Arduino" title="Arduino">
-                                </li>
-                            </ul>
+
+                        <div id="personal" data-tab-content class="skills_content">
+                            <div class="col_aa">
+                                <h4 class="subheading_font">Ethics</h4>
+                                <ul>
+                                    <li>Self-Motivated</li>
+                                    <li>Organized</li>
+                                    <li>Team Work</li>
+                                    <li>Problem Solving</li>
+                                    <li>Creativity</li>
+                                </ul>
+                            </div>
+                            <div class="col_aa">
+                                <h4 class="subheading_font">Languages</h4>
+                                <ul>
+                                    <li>Urdu - Native Language </li>
+                                    <li>English - Daily Use</li>
+                                    <li>French - Limited</li>
+                                    <li>Japanese - Beginner</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col_aa section_font">
-                            <h3 class="subheading_font">Personal</h3>
-                            <ul>
-                                <li class="pers_skills">
-                                    <img class="item_svg" src="images/check-mark.png" alt="checkmark">Organization</li>
-                                <li class="pers_skills">
-                                    <img class="item_svg" src="images/check-mark.png" alt="checkmark">Teamwork</li>
-                                <li class="pers_skills">
-                                    <img class="item_svg" src="images/check-mark.png" alt="checkmark">Independant Work </li>
-                                <li class="pers_skills">
-                                    <img class="item_svg" src="images/check-mark.png" alt="checkmark">Motivated</li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div>
+                        <a href="#projects" class="button">Check out some of my Work!</a>
                     </div>
                 </section>
             </div>
-            <div class="background_dark">
+            <div class="timeline_background">
                 <section id="experience" class="container">
-                    <h2 class="heading light_text">
+                    <h2 class="heading dark_text">
                         Experience
-                        <hr>
                     </h2>
                     <div class="timeline">
                         <div class="timeline_block">
                             <div class="block_content">
-                                <div class="content_header right">
-                                    <span class="date">2013 - Present</span>
-                                    <div class="color_strip"></div>
+                                <div class="content_header">
+                                    <span class="date">2001 - Present</span>
                                 </div>
+                                <div class="color_strip"></div>
                                 <div class="content_body">
-                                    <h4>Earl Of March HighSchool</h4>
-                                    <p>test text</p>
+                                    <h4 class="subheading_font">Born</h4>
+                                    <span>Ottawa, Ontario</span>
+                                    <p>2001 is when my Journey Began...</p>
                                 </div>
                             </div>
                         </div>
                         <div class="timeline_block">
                             <div class="block_content">
                                 <div class="content_header">
-                                    <span class="date">2013 - Present</span>
-                                    <div class="color_strip"></div>
+                                    <span class="date">2015 - 2019</span>
                                 </div>
+                                <div class="color_strip"></div>
                                 <div class="content_body">
-                                    <h4>Carleton University</h4>
-                                    <p>Candidate for Bachelor of Science in
-                                        Information Science with a concentration
-                                         in Human Computer Interaction (HCI) and
-                                         a minor in Interaction Design</p>
+                                    <h4 class="subheading_font"> Earl of March HS</h4>
+                                    <span>Student</span>
+                                    <p>My passion for programming and software stems from
+                                        my first computer science course taken in 10th grade.
+                                        Exposure to tools such as Scratch and Alice was my
+                                        first taste of development and I've been pursuing it
+                                        ever since.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="timeline_block">
                             <div class="block_content">
                                 <div class="content_header">
-                                    <span class="date">2013 - Present</span>
-                                    <div class="color_strip"></div>
+                                    <span class="date">2018 - Present</span>
                                 </div>
+                                <div class="color_strip"></div>
                                 <div class="content_body">
-                                    <h4>Carleton University</h4>
-                                    <p>Candidate for Bachelor of Science in
-                                        Information Science with a concentration
-                                         in Human Computer Interaction (HCI) and
-                                         a minor in Interaction Design</p>
+                                    <h4 class="subheading_font">Royal Canadian Navy, Reserve Forces</h4>
+                                    <span>Naval Combat Information Operator</span>
+                                    <p>For the past 5 years that I have served as a member
+                                        of the CAF, I have had multiple training courses
+                                        and experience working with ship-board technology
+                                        and systems. Notably, I work with radars and
+                                        communication systems, and am even trained to be 
+                                        a voulenteer firefighter!
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="timeline_block">
                             <div class="block_content">
                                 <div class="content_header">
-                                    <span class="date">2013 - Present</span>
-                                    <div class="color_strip"></div>
+                                    <span class="date">2019 - Present</span>
                                 </div>
+                                <div class="color_strip"></div>
                                 <div class="content_body">
-                                    <h4>Carleton University</h4>
-                                    <p>Candidate for Bachelor of Science in
-                                        Information Science with a concentration
-                                         in Human Computer Interaction (HCI) and
-                                         a minor in Interaction Design</p>
+                                    <h4 class="subheading_font">Carleton University</h4>
+                                    <span>B.Eng. Software Engineering </span>
+                                    <p>Presently in my third year for a B.Eng. in
+                                        Software Engineering, with numerous courses
+                                        educating in different fields and languages.
+                                        A 5 year program with several COOP terms approaching
+                                        in the near future. Graduating in April 2024
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="timeline_block">
                             <div class="block_content">
                                 <div class="content_header">
-                                    <span class="date">2013 - Present</span>
-                                    <div class="color_strip"></div>
+                                    <span class="date">Present - Future</span>
                                 </div>
+                                <div class="color_strip"></div>
                                 <div class="content_body">
-                                    <h4>Carleton University</h4>
-                                    <p>Candidate for Bachelor of Science in
-                                        Information Science with a concentration
-                                         in Human Computer Interaction (HCI) and
-                                         a minor in Interaction Design</p>
+                                    <h4 class="subheading_font">Your Company</h4>
+                                    <span>A Cool Position</span>
+                                    <p>This is a special spot reserved for your company!</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <span class="timeline_bottom"></span>
+                </section>
+            </div>
+            <div class="resume_sect">
+                <i class="fa fa-download fa-3x"></i>
+                <h4 class="text">View Resume</h4>
+            </div>
+            <div class="background_dark">
+                <section id="projects" class="container">
+                    <h2 class="heading dark_text">Projects</h2>
+                    <div class="project_wrapper">
+                        <h3>A Collection of My Works</h3>
+                        <div class="project_block">
+                            <div class="image_section">
+                                <img class="img_large" src="images/website_img.png" alt="asd">
+                                <a href="https://google.com" target="_blank"></a>
+                                </div>
+                            <div class="text_section">
+                                <h4>PERSONAL WEBSITE</h4>
+                                <p>
+                                    My first website project that I used to learn and familiarize myself
+                                    with the languages and webdev as a whole.
+                                </p>
+                                <div class="project_tools">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JS</li>
+                                    </ul>
+                                    <a href="https://google.com"><img class="social" src="images/github.png" alt="GitHub"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_block">
+                            <div class="image_section">
+                                <img class="img_large" src="images/YT_database_img2.png" alt="asd">
+                                <a href="https://google.com" target="_blank"></a>
+                            </div>
+                            <div class="text_section">
+                                <h4>Youtube Playlist</h4>
+                                <p>A mini project to learn MySQL and play around with small databases,
+                                    while also allowing me to backlog my playlists.
+                                </p>
+                                <div class="project_tools">
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                    <a href="https://google.com"><img class="social" src="images/github.png" alt="GitHub"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_block">
+                            <div class="image_section">
+                                <img class="img_large" src="images/placeholder_resume.png" alt="asd">
+                                <a href="https://google.com" target="_blank"></a>
+                            </div>
+                            <div class="text_section">
+                                <h4>React resume</h4>
+                                <p>Quick project to learn React.js and create an online version of my resume
+                                </p>
+                                <div class="project_tools">
+                                    <ul>
+                                        <li>React.js</li>
+                                        <li>CSS</li>
+                                    </ul>
+                                    <a href="https://google.com"><img class="social" src="images/github.png" alt="GitHub"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_block">
+                            <div class="image_section">
+                                <img class="img_large" src="images/dungeon_dwellers_img3.png" alt="asd">
+                                <a href="https://google.com" target="_blank"></a>
+                            </div>
+                            <div class="text_section">
+                                <h4>DUNGEON DWELLERS</h4>
+                                <p>A fun project I undertook with a group of friends during UOttaHack 4.
+                                </p>
+                                <div class="project_tools">
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>Java.Swing</li>
+                                    </ul>
+                                    <a href="https://google.com"><img class="social" src="images/github.png" alt="GitHub"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project_block">
+                            <a href="https://github.com/Bilalbc" target="_blank" class="button">View More</a>
                         </div>
                     </div>
                 </section>
