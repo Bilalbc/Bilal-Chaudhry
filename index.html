@@ -5,23 +5,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>BilalChaudhry.com</title>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <header id="header">
-        <nav class='nav_list'>
-            <ul id="mainNav"class="nav_items">
-                <li class="list_e active"><a href="#home">Home</a></li>
-                <li class="list_e"><a href="#about">About</a></li>
-                <li class="list_e"><a href="#experience">Experience</a></li>
-                <li class="list_e"><a href="#projects">Projects</a></li>
-                <li class="list_e"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid justify-content-end">
+                <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- add the droptown tabs here -->
+                  </button>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+          </nav>
     </header>
     <div orientation="left" class="side_elements">
         <ul class="social_list">
@@ -35,7 +42,7 @@
     </div>
     <div id="content">
         <main class="pages">
-            <section id="home" class="image_container">
+            <section id="home" class="hmpg background">
                 <div class="intro_text">
                     <h1>Hello, I'm <span style="color: #32BA68">Bilal Chaudhry</span> </h1>
                     <hr>
@@ -44,10 +51,10 @@
             </section>
             <div class="background_dark">
                 <section id="about" class="container">
-                    <h2 class="heading dark_text">About
+                    <h2 class="heading dark_text slide_in">About
                     </h2>
-                    <div class="body_text">
-                        <div class="col_aa">
+                    <div class="body_text row">
+                        <div class="col-4">
                             <h3 class="dark_text">Who am I?</h3>
                             <p>
                                 Hello! Thanks for taking the time to look through my site! I'm Bilal Chaudhry,
@@ -57,10 +64,10 @@
                                 users.
                             </p>
                         </div>
-                        <div class="col_aa center_img">
+                        <div class="col-4 center_img">
                             <img src="images/personal.png" alt="Bilal Chaudhry" width="246" height="246">
                         </div>
-                        <div class="col_aa">
+                        <div class="col-4">
                             <h3 class="dark_text">Details</h3>
                             <p>
                                 <strong>Name</strong>
@@ -84,71 +91,72 @@
                     </div>
                     <div class="skills">
                         <h3 class="dark_text">My Specialties</h3>
-
                         <ul class="tabs">
                             <li data-tab-target="#professional" class="active tab">Professional </li>
                             <li data-tab-target="#personal" class="tab">Personal </li>
                         </ul>
-
-                        <div id="professional" data-tab-content class="skills_content active">
-                            <div class="col_aa">
-                                <h4 class="subheading_font">Development</h4>
-                                <ul>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                    <li>HTML5</li>
-                                    <li>CSS3</li>
-                                    <li>javascript (ES6)</li>
-                                    <li>MySQL</li>
-                                </ul>
-                            </div>
-                            <div class="col_aa">
-                                <h4 class="subheading_font">Tools</h4>
-                                <ul>
-                                    <li>Git/Github</li>
-                                    <li>Command Line</li>
-                                    <li>Node.js</li>
-                                </ul>
-                            </div>
-                            <div class="col_aa">
-                                <h4 class="subheading_font">Workspaces</h4>
-                                <ul>
-                                    <li>Visual Studio Code</li>
-                                    <li>Windows</li>
-                                    <li>Linux</li>
-                                    <li>Chrome</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="personal" data-tab-content class="skills_content">
-                            <div class="col_aa">
-                                <h4 class="subheading_font">Ethics</h4>
-                                <ul>
-                                    <li>Self-Motivated</li>
-                                    <li>Organized</li>
-                                    <li>Team Work</li>
-                                    <li>Problem Solving</li>
-                                    <li>Creativity</li>
-                                </ul>
-                            </div>
-                            <div class="col_aa">
-                                <h4 class="subheading_font">Languages</h4>
-                                <ul>
-                                    <li>Urdu - Native Language </li>
-                                    <li>English - Daily Use</li>
-                                    <li>French - Limited</li>
-                                    <li>Japanese - Beginner</li>
-                                </ul>
+                        <div id="professional" data-tab-content class="col-12 skills_content active">
+                            <div class="row">
+                                <div class="col-4">
+                                    <h4 class="subheading_font">Development</h4>
+                                    <ul>
+                                        <li>Java</li>
+                                        <li>Python</li>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>javascript (ES6)</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <h4 class="subheading_font">Tools</h4>
+                                    <ul>
+                                        <li>Git/Github</li>
+                                        <li>Command Line</li>
+                                        <li>Node.js</li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <h4 class="subheading_font">Workspaces</h4>
+                                    <ul>
+                                        <li>Visual Studio Code</li>
+                                        <li>Windows</li>
+                                        <li>Linux</li>
+                                        <li>Chrome</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <a href="#projects" class="button">Check out some of my Work!</a>
+                        <div id="personal" data-tab-content class="col-12 skills_content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h4 class="subheading_font">Ethics</h4>
+                                    <ul>
+                                        <li>Self-Motivated</li>
+                                        <li>Organized</li>
+                                        <li>Team Work</li>
+                                        <li>Problem Solving</li>
+                                        <li>Creativity</li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <h4 class="subheading_font">Languages</h4>
+                                    <ul>
+                                        <li>Urdu - Native Language </li>
+                                        <li>English - Daily Use</li>
+                                        <li>French - Limited</li>
+                                        <li>Japanese - Beginner</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_container">
+                            <a href="#projects" class="button">Check out some of my Work!</a>
+                        </div>
                     </div>
                 </section>
             </div>
-            <div class="timeline_background">
+            <div class="tl background">
                 <section id="experience" class="container">
                     <h2 class="heading dark_text">
                         Experience
@@ -290,7 +298,7 @@
                         </div>
                         <div class="project_block">
                             <div class="image_section">
-                                <img class="img_large" src="images/placeholder_resume.png" alt="asd">
+                                <img class="img_large" src="images/temp.jpg" alt="asd">
                                 <a href="https://google.com" target="_blank"></a>
                             </div>
                             <div class="text_section">
@@ -324,12 +332,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="project_block">
+                        <div class="button_container">
                             <a href="https://github.com/Bilalbc" target="_blank" class="button">View More</a>
                         </div>
                     </div>
                 </section>
             </div>
+
+            <div class="cnt background" style="height: 1000px;">
+                <section class="container" id="contact">
+                    <h2 class="heading dark_text">Contact</h2>
+                    <div class="text_section text_center">
+                        <p>I'm open to any opportunity that may come my way, and would love to
+                            hear from you! If you have any questions please do reach out and I
+                            will do my best to respond!
+                        </p>
+                    </div>
+                    <a href="mailto:Bilalbc@gmail.com" target="_blank" class="button">Get In Touch</a>
+                </section>
+            </div>
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+            <script src="script.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+            crossorigin="anonymous"></script>
         </main>
     </div>
 </body>
