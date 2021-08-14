@@ -15,7 +15,7 @@ function navbar_effects() {
     var items = document.getElementsByClassName('nav-item');
 
     function myFunction() {
-        if(document.body.scrollTop > 280 || document.documentElement.scrollTop > 280) {
+        if(document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
             navbar.style.backgroundColor ='#1f1925';
             navbar.style.padding = '0%';
             navbar.style.borderBottom = '3px solid #018786';
