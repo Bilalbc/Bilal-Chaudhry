@@ -873,7 +873,7 @@ footer p {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 970px) {
 
 }
 
@@ -942,6 +942,10 @@ footer p {
 
     .tab {
         font-size: 0.8em;
+    }
+
+    .heading {
+        font-size: 40px
     }
 
     .project_wrapper .project_block .text_section {
