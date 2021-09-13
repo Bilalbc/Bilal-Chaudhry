@@ -725,6 +725,7 @@ section {
 .project_block .text_section .project_tools ul li{
     display: inline-block;
     font-family: var(--font-mono);
+    padding: 0px 6px 0px 0px;
     letter-spacing: 1px;
     font-size: var(--text-xs);
 }
